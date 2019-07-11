@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var progressBar: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func didSlide(_ sender: UISlider) {
+        // Had to set min = 0 ,max = 1 on the slider
+        progressBar.progress = sender.value
+    }
+    
 }
 
